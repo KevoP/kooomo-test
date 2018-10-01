@@ -1,0 +1,89 @@
+@import "~bootstrap/scss/bootstrap";
+
+/** Hero **/
+.hero{
+    background: url('images/hero.jpg');
+    background-size: cover;
+    height: calc(100vh - 120px);
+    background-repeat: no-repeat;
+}
+
+.yellow-highlight{
+    border-top: 8px solid yellow;
+}
+
+/** Nav Bar **/
+.topbar{
+    border-bottom: 1px solid black;
+}
+
+/** Search **/
+.search-wrap{
+    position: relative;
+}
+
+.search-icon{
+    background: url('images/search.png');
+    display:inline-block;
+    position: absolute;
+    right: 21px;
+    top: 9px;
+    opacity: 1;
+    transition: all .3s linear;
+    height: 15px;
+    width: 15px;
+}
+
+#search:focus + .search-icon{
+    opacity: 0;
+}
+
+/** Breadcrumbs **/
+.breadcrumb{
+    background: none;
+}
+
+.breadcrumb-item + .breadcrumb-item::before{
+    content: ">";
+}
+
+/** product **/
+div.product{
+    overflow: hidden;
+    display: inline-block;
+
+    .favorite{
+        opacity: 0;
+        transition: all .3s linear;
+        background: url('images/heart-icon.png');
+        height: 19px;
+        width: 23px;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        background-repeat: no-repeat;
+    }
+
+    &:hover .favorite{
+        opacity: 1;
+    }
+}
+
+
+
+.product-title{
+    font-size: 1.3rem;
+}
+
+.short-description{
+    font-size: .8rem;
+}
+
+.price.sale{
+    color: red;
+}
+
+.price.sale + .price{
+    font-size: .85rem;
+}
+
