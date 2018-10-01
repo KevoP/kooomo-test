@@ -42,6 +42,7 @@ function displayProducts(products){
     productContainer.innerHTML = productHtml;
 }
 
+
 fetch(productsEndpoint)
     .then(blob =>blob.json())
     .then(products => {
