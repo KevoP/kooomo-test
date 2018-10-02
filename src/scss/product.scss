@@ -1,0 +1,117 @@
+.product-container{
+    
+    min-height: 200px;
+
+    > div{
+        margin-bottom: 30px;
+    }
+}
+
+div.product{
+    
+    position: relative;
+    max-width: 320px;
+    margin: 0px auto;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgba(200,200,200, 0.4);
+    border-radius: 2px;    
+    height: 100%;
+    padding: 10px 4px;
+    transition: all .3s linear;
+
+    .favorite{
+        transition: all .3s linear;
+        background: url('images/heart-icon.png');
+        height: 19px;
+        width: 23px;
+        position: absolute;
+        right: 25px;
+        top: 15px;
+        background-repeat: no-repeat;
+    }
+
+    .product-text{
+        height: 100px;
+    }
+
+    .product-title{
+        font-size: 1.1rem;
+    }
+
+    .short-description{
+        font-size: .7rem;
+        word-break: break-all;
+        hyphens: auto;
+    }
+
+    .price{
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+    .price.sale{
+        color: red;
+    }
+
+    .price.sale + .price{
+       font-size: .85rem;
+    }
+
+    .more-colors{
+        opacity: 0;
+        transition: all .3s linear;
+        font-size: .8rem;
+        font-weight: bold;
+        margin-top: 12px;
+
+        .color{
+            height: 18px;
+            width: 18px;
+            display: inline-block;
+            margin: 4px;
+            border: 1px solid transparent;
+
+            &.Bianco,
+            &.Beige{
+                border-color: #999;
+            }
+        }
+    }
+
+    
+        
+}
+
+@include media-breakpoint-up(sm){
+    .favorite{
+        opacity: 0;
+    }
+
+    .product{
+        border-color: transparent;
+    }    
+}
+
+@include media-breakpoint-up(lg){
+    
+    div.product{
+
+        border-color: transparent;
+
+        &:hover {
+            border-color: #C8C8C8;
+            border-color: rgba(200,200,200, 0.4);
+
+            .favorite{
+                opacity: 1;
+            }
+
+            .more-colors{
+                opacity: 1;
+            }
+        }    
+    }
+
+    
+}
